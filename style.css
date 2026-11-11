@@ -1,0 +1,49 @@
+/* Self-contained: no fonts, scripts or assets are fetched from anywhere.
+   A privacy page that phones out to a CDN would contradict itself. */
+:root {
+  --bg: #fdfcff; --fg: #1b1b1f; --muted: #5a5a66;
+  --accent: #6b4fd8; --line: #e4e1ee; --card: #ffffff;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #131318; --fg: #e8e6ef; --muted: #a09daf;
+    --accent: #a995ff; --line: #2a2833; --card: #1b1a22;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--bg); color: var(--fg);
+  font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+.wrap { max-width: 44rem; margin: 0 auto; padding: 3rem 16px 4rem; }
+header { display: flex; align-items: center; gap: .75rem; margin-bottom: 2.5rem; }
+.mark {
+  width: 44px; height: 44px; border-radius: 10px; flex: none;
+  background: var(--accent); display: grid; place-items: center;
+}
+.mark svg { width: 26px; height: 26px; }
+h1 { font-size: 1.9rem; line-height: 1.2; margin: 0; letter-spacing: -.02em; }
+header p { margin: .2rem 0 0; color: var(--muted); font-size: .95rem; }
+h2 { font-size: 1.15rem; margin: 2.5rem 0 .6rem; letter-spacing: -.01em; }
+h3 { font-size: 1rem; margin: 1.6rem 0 .3rem; }
+p, li { color: var(--fg); }
+.lede { font-size: 1.05rem; color: var(--muted); }
+a { color: var(--accent); }
+ul { padding-left: 1.2rem; }
+li { margin: .3rem 0; }
+.card {
+  background: var(--card); border: 1px solid var(--line);
+  border-radius: 12px; padding: 1.1rem 1.25rem; margin: 1.25rem 0;
+}
+.btn {
+  display: inline-block; background: var(--accent); color: #fff;
+  text-decoration: none; font-weight: 600; font-size: .95rem;
+  padding: .7rem 1.15rem; border-radius: 9px; margin-top: .3rem;
+}
+.note { color: var(--muted); font-size: .9rem; }
+footer {
+  margin-top: 3.5rem; padding-top: 1.25rem; border-top: 1px solid var(--line);
+  color: var(--muted); font-size: .88rem;
+  display: flex; gap: 1rem; flex-wrap: wrap;
+}
